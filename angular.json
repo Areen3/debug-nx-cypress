@@ -139,6 +139,27 @@
           }
         }
       }
+    },
+    "cy-model": {
+      "root": "libs/cy-model",
+      "sourceRoot": "libs/cy-model/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/cy-model/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cy-model"],
+          "options": {
+            "jestConfig": "libs/cy-model/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

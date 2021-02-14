@@ -17,6 +17,7 @@
   },
   "projects": {
     "cy": { "tags": [] },
-    "cy-e2e": { "tags": [], "implicitDependencies": ["cy"] }
+    "cy-e2e": { "tags": [], "implicitDependencies": ["cy"] },
+    "cy-model": { "tags": [] }
   }
 }
