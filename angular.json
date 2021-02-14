@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "cy",
+  "projects": {
+    "cy": {
+      "projectType": "application",
+      "root": "apps/cy",
+      "sourceRoot": "apps/cy/src",
+      "prefix": "areen",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/cy",
+            "index": "apps/cy/src/index.html",
+            "main": "apps/cy/src/main.ts",
+            "polyfills": "apps/cy/src/polyfills.ts",
+            "tsConfig": "apps/cy/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/cy/src/favicon.ico", "apps/cy/src/assets"],
+            "styles": ["apps/cy/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/cy/src/environments/environment.ts",
+                  "with": "apps/cy/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "cy:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "cy:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cy:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/cy/src/**/*.ts", "apps/cy/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/cy"],
+          "options": {
+            "jestConfig": "apps/cy/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "cy-e2e": {
+      "root": "apps/cy-e2e",
+      "sourceRoot": "apps/cy-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/cy-e2e/cypress.json",
+            "tsConfig": "apps/cy-e2e/tsconfig.e2e.json",
+            "devServerTarget": "cy:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "cy:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/cy-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  }
+}
