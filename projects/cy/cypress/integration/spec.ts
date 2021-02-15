@@ -8,6 +8,7 @@ describe('create new items', () => {
   it('should have resources', () => {
     cy.visit('/');
     const myData: IModelData = { data: 'test data from cypress' };
+    console.log('moj debug');
     cy.contains('Resources');
     console.log(modelDataTest(myData));
   });

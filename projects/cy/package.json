@@ -1,0 +1,8 @@
+{
+  "name": "debug-cypress",
+  "version": "0.0.0",
+  "scripts": {
+    "cy:open": "node ../../node_modules/cypress/bin/cypress open",
+    "cy:run": "cypress run"
+  }
+}
