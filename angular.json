@@ -148,6 +148,18 @@
             "karmaConfig": "projects/cy-lib/karma.conf.js"
           }
         },
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/cy-lib/tsconfig.lib.json",
+            "project": "projects/cy-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cy-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

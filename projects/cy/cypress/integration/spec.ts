@@ -1,4 +1,5 @@
-import { IModelData, modelDataTest } from '../../../cy-lib/src/public-api';
+import { IModelData, modelDataTest } from 'cy-lib';
+// import { IModelData, modelDataTest } from 'cy-lib/src/public-api';
 
 
 describe('create new items', () => {

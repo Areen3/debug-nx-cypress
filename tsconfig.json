@@ -19,8 +19,11 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "cy-lib": [
-        "projects/cy-lib/src/public-api.ts"
-      ]
+        "projects/cy-lib/src/public-api.ts",
+        "dist/cy-lib/cy-lib",
+        "dist/cy-lib"
+      ],
+
     }
   }
 }
