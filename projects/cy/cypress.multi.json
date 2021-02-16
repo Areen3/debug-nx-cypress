@@ -5,8 +5,5 @@
   "screenshotsFolder": "projects/cy/cypress/screenshots",
   "pluginsFile": "projects/cy/cypress/plugins/index.js",
   "fixturesFolder": "projects/cy/cypress/fixtures",
-  "baseUrl": "http://localhost:4200",
-  "env": {
-    "CYPRESS_REMOTE_DEBUGGING_PORT": 9222
-  }
+  "baseUrl": "http://localhost:4200"
 }

@@ -98,7 +98,7 @@
             "devServerTarget": "cy:serve",
             "watch": true,
             "headless": false,
-            "configFile": "projects/cy/cypress.json"
+            "configFile": "projects/cy/cypress.multi.json"
           },
           "configurations": {
             "production": {
@@ -110,7 +110,7 @@
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {
             "devServerTarget": "cy:serve",
-            "configFile": "projects/cy/cypress.json"
+            "configFile": "projects/cy/cypress.multi.json"
           },
           "configurations": {
             "production": {
@@ -124,7 +124,7 @@
             "devServerTarget": "cy:serve",
             "watch": true,
             "headless": false,
-            "configFile": "projects/cy/cypress.json"
+            "configFile": "projects/cy/cypress.multi.json"
           },
           "configurations": {
             "production": {

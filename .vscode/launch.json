@@ -14,14 +14,26 @@
     {
       "type": "pwa-chrome",
       "request": "attach",
-      "name": "Attach to Cypress Chrome",
+      "name": "Attach to Cypress Chrome by ng",
+      "port": 9222,
+      "urlFilter": "http://localhost*",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "skipFiles": [
+        "cypress_runner.js",
+      ],
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "attach",
+      "name": "Attach to Cypress Chrome by cypress",
       "port": 9222,
       "urlFilter": "http://localhost*",
       "webRoot": "${workspaceFolder}/projects/cy",
       "sourceMaps": true,
       "skipFiles": [
-          "cypress_runner.js",
+        "cypress_runner.js",
       ],
-  },
+    },
   ]
 }
