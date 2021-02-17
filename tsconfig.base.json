@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@areen/cy-model": ["libs/cy-model/src/index.ts"]
+      "@areen/cy-model": ["./libs/cy-model/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

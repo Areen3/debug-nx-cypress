@@ -3,6 +3,6 @@ export interface ITestCyModel {
 }
 
 export function cyModel(data: ITestCyModel): string {
+  console.log('from lib:', data.myData);
   return data.myData
 }
-
