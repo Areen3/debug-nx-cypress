@@ -2,15 +2,9 @@
   "extends": "../../../tsconfig.json",
   "include": ["../../../node_modules/cypress", "**/*.ts"],
   "compilerOptions": {
-    "sourceMap": true,
-    "types": ["cypress"],
+    "sourceMap": false,
     "paths": {
-      "cy-lib": [
-        "projects/cy-lib/src/public-api.ts",
-        "dist/cy-lib/cy-lib",
-        "dist/cy-lib"
-      ],
-
+      "cy-lib": ["projects/cy-lib"]
     }
-  },
+  }
 }

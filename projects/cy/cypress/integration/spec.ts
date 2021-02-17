@@ -1,6 +1,4 @@
 import { IModelData, modelDataTest } from 'cy-lib';
-// import { IModelData, modelDataTest } from 'cy-lib/src/public-api';
-
 
 describe('create new items', () => {
   beforeEach(() => {
@@ -12,6 +10,10 @@ describe('create new items', () => {
     console.log('moj debug');
     cy.contains('Resources');
     console.log(modelDataTest(myData));
+  });
+
+  it('should boolean', () => {
+    expect(true).to.equal(true);
   });
 });
 

@@ -14,26 +14,18 @@
     {
       "type": "pwa-chrome",
       "request": "attach",
-      "name": "Attach to Cypress Chrome by ng",
+      "name": "Attach to Cypress Chrome",
       "port": 9222,
       "urlFilter": "http://localhost*",
       "webRoot": "${workspaceFolder}",
       "sourceMaps": true,
+      // "sourceMapPathOverrides": {
+      //   "webpack:///./node_modules/cy-lib/fesm2015/*": "${webRoot}/projects/cy-lib/src/lib/*",
+      //   "webpack:///./projects/*": "${webRoot}/projects/*", // odwołanie względne wskazuje wszystkie pliki w katalogu aplikacji
+      // },
       "skipFiles": [
         "cypress_runner.js",
       ],
-    },
-    {
-      "type": "pwa-chrome",
-      "request": "attach",
-      "name": "Attach to Cypress Chrome by cypress",
-      "port": 9222,
-      "urlFilter": "http://localhost*",
-      "webRoot": "${workspaceFolder}/projects/cy",
-      "sourceMaps": true,
-      "skipFiles": [
-        "cypress_runner.js",
-      ],
-    },
+    }
   ]
 }

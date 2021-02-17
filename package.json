@@ -2,9 +2,9 @@
   "name": "debug-cypress",
   "version": "0.0.0",
   "scripts": {
-    "cy:open": "cypress open",
+    "cy:open": "cypress open --config-file ./projects/cy/cypress.multi.json",
     "cy:run": "cypress run",
-    "cypr": " cd projects/cy && npm run cy:open",
+    "cypr": "run-p start cy:open",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

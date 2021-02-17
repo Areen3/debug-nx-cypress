@@ -1,9 +1,11 @@
 {
-  "name": "cy-lib",
+  "name": "core",
   "version": "0.0.1",
+  "main": "src/public-api.ts",
+  "typings": "src/public-api.ts",
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9"
+    "@angular/common": "^11.0.1",
+    "@angular/core": "^11.0.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"

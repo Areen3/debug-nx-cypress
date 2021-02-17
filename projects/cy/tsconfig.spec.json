@@ -2,9 +2,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
+    "outDir": "../../out-tsc/spec",
     "types": [
-       "cypress"
+      "jasmine"
     ]
   },
   "files": [
@@ -14,5 +14,5 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ],
+  ]
 }
