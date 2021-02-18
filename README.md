@@ -12,7 +12,10 @@ test e2e : nx e2e cy-e2e
 test nx in watch mode: nx e2e cy-e2e --watch
 test cypress: npm run cypr
 
-in these cases use debug lauch conf: Attach to Cypress Chrome
+VSC: in these cases use debug lauch conf: Attach to Cypress Chrome
+Webstorm single file:
+download: https://plugins.jetbrains.com/plugin/13987-cypress-support-pro
+use configuration: debug nx
 
 You HAVE TO add to local env variable in window control panel
 key: CYPRESS_REMOTE_DEBUGGING_PORT
