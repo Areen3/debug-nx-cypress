@@ -25,7 +25,9 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "cy:open": "cd apps/cy-e2e && node ../../node_modules/cypress/bin/cypress open",
+    "cypr": "run-p start cy:open"
   },
   "private": true,
   "dependencies": {

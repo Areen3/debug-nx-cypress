@@ -7,5 +7,6 @@
   "video": true,
   "videosFolder": "../../dist/cypress/apps/cy-e2e/videos",
   "screenshotsFolder": "../../dist/cypress/apps/cy-e2e/screenshots",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "baseUrl": "http://localhost:4200"
 }
